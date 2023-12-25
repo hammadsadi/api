@@ -27,7 +27,12 @@ const PORT = process.env.PORT || 9000;
 app.use(express.static("public"));
 
 // Init Cors
-const allowedOrigin = ["http://localhost:3000", "http://localhost:5173"];
+const allowedOrigin = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://api.surgicare.info",
+  "https://surgicare.info",
+];
 app.use(
   cors({
     origin: allowedOrigin,
