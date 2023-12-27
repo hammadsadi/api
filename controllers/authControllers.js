@@ -66,6 +66,7 @@ export const loginAuth = expressAsyncHandler(async (req, res) => {
   res.cookie("accessToken", token, {
     httpOnly: true,
     sameSite: "lax",
+    secure: process.env.APP_ENV == "Development" ? false : true,
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
   res.status(200).json({ user: userCheck, message: "Login Successful" });
