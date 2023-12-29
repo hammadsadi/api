@@ -33,6 +33,7 @@ app.use(
     origin: allowedOrigin,
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+    optionsSuccessStatus: 200,
   })
 );
 app.use(cookieParser());
