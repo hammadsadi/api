@@ -29,7 +29,11 @@ app.use(express.static("public"));
 // Init Cors
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://surgicare.info"],
+    origin: [
+      "http://localhost:3000",
+      "https://surgicare.info",
+      "https://rest-api-nzth.onrender.com",
+    ],
     credentials: true,
     // methods: "GET, POST, PUT, PATCH, DELETE",
     // optionsSuccessStatus: 200,

@@ -4,6 +4,7 @@ import expressAsyncHandler from "express-async-handler";
 
 const authVerify = (req, res, next) => {
   const accessToken = req.cookies.accessToken;
+  console.log(accessToken);
   // const accessToken = req?.cookies?.accessToken || req?.headers?.authorization;
   if (!accessToken) return res.status(400).json({ message: "Unauthorized" });
 
