@@ -27,13 +27,12 @@ const PORT = process.env.PORT || 9000;
 app.use(express.static("public"));
 
 // Init Cors
-const allowedOrigin = ["http://localhost:3000", "https://surgicare.info"];
 app.use(
   cors({
-    origin: allowedOrigin,
+    origin: ["http://localhost:3000", "https://surgicare.info"],
     credentials: true,
-    methods: "GET, POST, PUT, PATCH, DELETE",
-    optionsSuccessStatus: 200,
+    // methods: "GET, POST, PUT, PATCH, DELETE",
+    // optionsSuccessStatus: 200,
   })
 );
 app.use(cookieParser());
