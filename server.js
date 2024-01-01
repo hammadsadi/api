@@ -33,6 +33,7 @@ app.use(
       "http://localhost:3000",
       "https://surgicare.info",
       "https://rest-api-nzth.onrender.com",
+      "https://my-app-peach-eight.vercel.app",
     ],
     credentials: true,
     // methods: "GET, POST, PUT, PATCH, DELETE",
